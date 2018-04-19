@@ -17,6 +17,10 @@ public class HealthController : MonoBehaviour {
 			Damaging ();
 		}
 	}
-	public virtual void Damaging(){}
-	public virtual void Dying(){}
+	public virtual void Damaging()
+	{
+	}
+	public virtual void Dying()
+	{
+	}
 }

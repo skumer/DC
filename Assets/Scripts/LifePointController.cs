@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LifePointControler : MonoBehaviour {
+public class LifePointController : MonoBehaviour {
 
 	private int lifePoints = 0;
 	public Text lpText;
