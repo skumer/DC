@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class LifePointController : MonoBehaviour {
 
-	private int lifePoints = 0;
+	private int lifePoints = 3;
 	public Text lpText;
 
 	public int LifePoints{

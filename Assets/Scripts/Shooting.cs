@@ -28,7 +28,7 @@ public class Shooting : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(playerHealth.health > 0)
+		if (playerHealth.health > 0)
 		{
 			if (Input.GetButtonDown ("Fire2"))
 			{

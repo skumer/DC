@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HealthController : MonoBehaviour {
 
-	public float health = 3;
+	public float health = 4;
 	private bool isDead = false;
 
 	void ApplyDamage(float damage)
