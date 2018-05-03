@@ -19,18 +19,19 @@ public class PlayerController : MonoBehaviour {
 	}
 	
 	void Update() {
-		if (playerHealth.health > 0 && !gameEnded) {
-			moveDirection = new Vector3 (Input.GetAxis ("Horizontal"), 0, Input.GetAxis ("Vertical"));
-			moveDirection = transform.TransformDirection (moveDirection);
+		if(playerHealth.health > 0 && !gameEnded)
+		{
+			moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+			moveDirection = transform.TransformDirection(moveDirection);
 			moveDirection = moveDirection * moveSpeed;
-			controller.SimpleMove (moveDirection);
+			controller.SimpleMove(moveDirection);
 
-			if (Input.GetKeyDown ("q")){
-				destRotation.eulerAngles = destRotation.eulerAngles - new Vector3 (0, 90, 0);
-			}
-			if (Input.GetKeyDown ("e")) {
-				destRotation.eulerAngles = destRotation.eulerAngles + new Vector3 (0, 90, 0);
-			}
+			if(Input.GetKeyDown("q"))
+				destRotation.eulerAngles = destRotation.eulerAngles - new Vector3(0,90,0);
+
+			if(Input.GetKeyDown("e"))
+				destRotation.eulerAngles = destRotation.eulerAngles + new Vector3(0,90,0);
+
 			float step = rotationSpeed * Time.deltaTime;
 			transform.rotation = Quaternion.RotateTowards(transform.rotation, destRotation, step);
 		}

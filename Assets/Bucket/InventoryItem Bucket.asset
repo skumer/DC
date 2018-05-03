@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4777af9318656d54fba62249747c0aa2, type: 3}
-  m_Name: New InventoryItem e2371353-703e-433a-87bc-22d5593f1a02
+  m_Name: InventoryItem Bucket
   m_EditorClassIdentifier: 
   itemName: Bucket
   sprite: {fileID: 21300000, guid: c5bbc44d149125f4298fca5e35c61da6, type: 3}

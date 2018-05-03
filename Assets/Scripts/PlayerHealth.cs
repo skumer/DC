@@ -1,51 +1,67 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using System.Collections;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class PlayerHealth : HealthController {
 
 	public AudioClip hurtClip;
 	public AudioClip deathClip;
-	public Image healthGui;
+	//public GUITexture healthGui; 	//GUIElement
+	public Image healthGui;			//uGUI
 	private LifePointController lifePointController;
-	private float maxHealth;private Text messageText;private AudioSource audioSource;
+	private float maxHealth;
 
+	//private GUIText messageText;	//GUIElement
+	private Text messageText;		//uGUI
+	//private Rect guiRect;			//GUIElement
+	//private float guiMaxWidth;	//GUIElement
+	private AudioSource audioSource;
 	void Start () {
-		messageText = GameObject.FindGameObjectWithTag ("Message").GetComponent<Text>();
-		lifePointController = GameObject.FindGameObjectWithTag ("GameController").GetComponent<LifePointController>();
-		audioSource = GetComponent<AudioSource> ();
+		//messageText = GameObject.FindGameObjectWithTag ("Message").
+		//	GetComponent<GUIText>();	//GUIElement
+		messageText = GameObject.FindGameObjectWithTag ("Message").
+			GetComponent<Text>();	//uGUI
+		lifePointController = GameObject.FindGameObjectWithTag("GameController").
+			GetComponent<LifePointController>();
+		audioSource = GetComponent<AudioSource>();
+		//guiRect = new Rect (healthGui.pixelInset); //GUIElement
+		//guiMaxWidth = guiRect.width;	//GUIElement
 		maxHealth = health;
-		UpdateView ();
+		UpdateView();
 	}
 
-	public override void Damaging(){
+	public override void Damaging ()
+	{
 		audioSource.clip = hurtClip;
 		audioSource.Play ();
-		UpdateView ();
+		UpdateView();
 	}
 
-	public override void Dying(){
+ 	public override void Dying ()
+	{
 		audioSource.clip = deathClip;
 		audioSource.Play ();
-		UpdateView ();
+		UpdateView();
+
 		lifePointController.LifePoints -= 1;
-		if (lifePointController.LifePoints > 0) {
-			Invoke ("Restart", 1);
-		} else {
+
+		if(lifePointController.LifePoints > 0)
+			Invoke("Restart",1);
+		else
 			messageText.text = "Game Over";
-		}
 	}
 
 	void Restart()
 	{
-		Application.LoadLevel(Application.loadedLevel) ;
+		Application.LoadLevel(Application.loadedLevel);
 	}
-	// Update is called once per frame
-	void UpdateView() {
-		if (healthGui != null) {
-			healthGui.fillAmount = health / maxHealth;
+
+	void UpdateView()
+	{
+		if(healthGui != null) {
+			//guiRect.width = guiMaxWidth * health/maxHealth;	//GUIElement
+			//healthGui.pixelInset = guiRect;	//GUIElement
+			healthGui.fillAmount = health/maxHealth; //uGUI
 		}
 	}
 }

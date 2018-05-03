@@ -9,9 +9,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4777af9318656d54fba62249747c0aa2, type: 3}
-  m_Name: New InventoryItem e2371353-703e-433a-87bc-22d5593f1a02
+  m_Name: Inventory Item Stone
   m_EditorClassIdentifier: 
-  itemName: Key
-  sprite: {fileID: 21300000, guid: 197f33ac41e55044bbfa38898df6b6f8, type: 3}
+  itemName: Stone
+  sprite: {fileID: 21300000, guid: a894c31a858c6454a93edd9ce6379564, type: 3}
   picSound: {fileID: 8300000, guid: c005d4c8a49d0ce4aa8ac93635fa3b0e, type: 3}
-  prefab: {fileID: 1732982649068844, guid: 15c37b99537ef4a479555b174a290e9d, type: 2}
+  prefab: {fileID: 1089264863125052, guid: 0f8f37f08ce608c4c823187bcf5a820d, type: 2}

@@ -51,14 +51,13 @@ public class HoverEffects : MonoBehaviour {
 	{
 		ExitEffect();
 	}
+
 	void ExitEffect()
 	{
-		if (standardCursor != null) 
-		{
-			Cursor.SetCursor (standardCursor, hotSpot, CursorMode.Auto);
-		}
-		if (msgBox != null) {
+		if (standardCursor != null)
+			Cursor.SetCursor(standardCursor,hotSpot,CursorMode.Auto);
+
+		if (msgBox != null)
 			msgBox.text = "";
-		}
 	}
 }

@@ -1,12 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using System.Collections;
 
-public class InventoryItem : ScriptableObject
-{
+public class InventoryItem : ScriptableObject {
 
-    public string itemName;
-    public Sprite sprite;
-    public AudioClip picSound;
-    public GameObject prefab;
+	public string itemName;
+	public Sprite sprite;
+	public AudioClip picSound;
+	public GameObject prefab;
+
 }
